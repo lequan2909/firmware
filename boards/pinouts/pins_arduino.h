@@ -54,4 +54,6 @@
 #include "../ESP32-C5/pins_arduino.h"
 #elif NM_CYD_ESP32C5
 #include "../nm-cyd-c5/pins_arduino.h"
+#elif CUSTOM_ESP32S3_NV3023
+#include "../custom-esp32s3-nv3023/pins_arduino.h"
 #endif
