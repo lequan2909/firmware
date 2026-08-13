@@ -52,6 +52,7 @@ on:
           - "lilygo-t-hmi"
           - "lilygo-t-lora-pager"
           - "smoochiee-board"
+          - "custom-esp32s3-nv3023"
           - "Phantom_S024R"
           - "LAUNCHER_Phantom_S024R"
           - "Marauder-Mini"
