@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       target_branch:
-        description: 'Branch to build from'
-        required: true
-        default: 'main'
+        description: 'Branch/ref to build from. Leave empty to use the workflow branch.'
+        required: false
+        default: ''
         type: string
       environment:
         description: 'Select environment to build'
@@ -79,7 +79,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.target_branch }}
+          ref: ${{ github.event.inputs.target_branch || github.ref_name }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
