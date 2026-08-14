@@ -30,7 +30,8 @@ static const uint8_t SCL = 11;
 // Display SPI bus: NV3023, 296x240, SPI mode 3, X offset 24.
 static const uint8_t SS = 14;
 static const uint8_t MOSI = 10;
-static const int8_t MISO = -1;
+// Display is write-only; use an unused valid GPIO as dummy MISO to avoid GPIO255 at runtime.
+static const uint8_t MISO = 21;
 static const uint8_t SCK = 9;
 
 #define HAS_SCREEN 1

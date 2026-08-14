@@ -13,6 +13,7 @@ static SemaphoreHandle_t tftMutex;
     xSemaphoreGiveRecursive(tftMutex);
 
 tft_display::tft_display(int16_t _W, int16_t _H) : _height(_H), _width(_W) {
+    if (!tftMutex) tftMutex = xSemaphoreCreateRecursiveMutex();
     // clang-format off
 #if TFT_DATABUS_N == 3
     #if TFT_DISPLAY_DRIVER_N != 49
