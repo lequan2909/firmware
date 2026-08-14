@@ -95,6 +95,7 @@ static const uint8_t SCK = 9;
 #define LED_COUNT 1
 #define LED_TYPE WS2812
 #define LED_ORDER GRB
+#define LED_COLOR_STEP 15
 #define RGB_LED 48
 #define TXLED -1
 #define LED_ON HIGH
