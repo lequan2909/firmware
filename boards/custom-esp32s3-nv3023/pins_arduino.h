@@ -36,6 +36,8 @@ static const uint8_t SCK = 9;
 #define HAS_SCREEN 1
 #define HAS_TOUCH 1
 #define USER_SETUP_LOADED 1
+// Keep TFT_eSPI dependency compilable; runtime display backend is Arduino_GFX below.
+#define ST7789_DRIVER 1
 #define USE_ARDUINO_GFX 1
 #define TFT_DATABUS_N 0
 #define TFT_DISPLAY_DRIVER_N 18
